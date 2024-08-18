@@ -1,27 +1,25 @@
 import 'package:flutter/material.dart';
-
-import 'core/route/app_route.dart';
-import 'core/route/app_route_name.dart';
-import 'core/theme/app_theme.dart';
+import 'package:movie_ui_new/core/route/app_route.dart';
+import 'package:movie_ui_new/core/route/app_route_name.dart';
+import 'package:movie_ui_new/screens/signup_screen.dart';
+import 'package:movie_ui_new/screens/splash_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Movie UI",
-
-      /// by using this setting, UI will automatic support dark and light mode
-      theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
-      themeMode: ThemeMode.dark,
+      debugShowCheckedModeBanner: false,
+      title: 'Movie Theater App',
       initialRoute: AppRouteName.home,
       onGenerateRoute: AppRoute.generate,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: SplashScreen(),
     );
   }
 }

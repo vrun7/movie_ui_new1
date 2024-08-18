@@ -11,6 +11,7 @@ class MovieDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final movie = ModalRoute.of(context)?.settings.arguments as Movie;
+    
     return Scaffold(
       appBar: AppBar(
         systemOverlayStyle: SystemUiOverlayStyle.dark,

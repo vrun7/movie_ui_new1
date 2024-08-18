@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.black,
             image: DecorationImage(
-                image: AssetImage("assets/image/apes.jpeg"),
+                image: AssetImage("assets/backgroundmovie.jpg"),
                 fit: BoxFit.cover,
                 opacity: 0.4),
           ),

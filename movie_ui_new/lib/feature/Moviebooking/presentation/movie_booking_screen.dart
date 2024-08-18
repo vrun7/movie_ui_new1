@@ -5,6 +5,7 @@ import 'package:movie_ui_new/core/utils/date_time_extension.dart';
 import 'package:movie_ui_new/feature/Moviebooking/presentation/widgets/date_widget.dart';
 import 'package:movie_ui_new/feature/Moviebooking/presentation/widgets/seat_widget.dart';
 import 'package:movie_ui_new/feature/Moviebooking/presentation/widgets/time_widget.dart';
+import 'package:movie_ui_new/screens/paymentpage.dart';
 
 class MovieBookingScreen extends StatefulWidget {
   const MovieBookingScreen({super.key});
@@ -225,17 +226,23 @@ class _MovieBookingScreenState extends State<MovieBookingScreen> {
                       ),
                       Expanded(
                         child: Container(
-                          decoration: BoxDecoration(
-                            color: AppColor.primaryColor,
-                            borderRadius: BorderRadius.circular(32),
-                          ),
-                          padding: const EdgeInsets.all(16),
-                          alignment: Alignment.center,
-                          child: Text(
-                            "Book Now",
-                            style: Theme.of(context).textTheme.headlineSmall,
-                          ),
-                        ),
+                            decoration: BoxDecoration(
+                              color: AppColor.primaryColor,
+                              borderRadius: BorderRadius.circular(32),
+                            ),
+                            padding: const EdgeInsets.all(16),
+                            alignment: Alignment.center,
+                            child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColor.primaryColor,
+                                ),
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => PaymentPage()));
+                                },
+                                child: Text("Buy Ticket"))),
                       ),
                     ],
                   )
